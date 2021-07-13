@@ -1,9 +1,12 @@
 package com.shivam.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Team {
@@ -14,6 +17,17 @@ public class Team {
 	private String teamName;
 	private long totalWins;
 	private long totalMatches;
+	
+	@Transient
+	private List<Match> matches;
+	
+	
+	public List<Match> getMatches() {
+		return matches;
+	}
+	public void setMatches(List<Match> matches) {
+		this.matches = matches;
+	}
 	public long getId() {
 		return id;
 	}
@@ -32,17 +46,25 @@ public class Team {
 	public void setTotalWins(long totalWins) {
 		this.totalWins = totalWins;
 	}
+
 	public long getTotalMatches() {
 		return totalMatches;
 	}
 	public void setTotalMatches(long totalMatches) {
 		this.totalMatches = totalMatches;
 	}
+	
+	public Team() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Team(String teamName, long totalMatches) {
 		super();
 		this.teamName = teamName;
 		this.totalMatches = totalMatches;
 	}
+
 	@Override
 	public String toString() {
 		return "Team [teamName=" + teamName + ", totalWins=" + totalWins + ", totalMatches=" + totalMatches + "]";

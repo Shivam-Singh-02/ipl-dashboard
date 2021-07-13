@@ -13,10 +13,10 @@ import javax.persistence.Id;
 @Entity
 public class Match {
 
-//	public Match() {
-//		super();
-//		// TODO Auto-generated constructor stub
-//	}
+	public Match() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Id
     private long id;
@@ -35,6 +35,8 @@ public class Match {
     private String method;
     private String umpire1;
     private String umpire2;
+    
+    
 
     
     
