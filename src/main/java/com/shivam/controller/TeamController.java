@@ -34,6 +34,11 @@ public class TeamController {
 		// TODO Auto-generated constructor stub
 	}
 
+	@GetMapping("/teams")
+	public Iterable<Team> getTeams(){
+		return this.teamRepository.findAll();
+	}
+	
 	@GetMapping("/team/{teamName}")
 	public Team getTeam(@PathVariable String teamName) {
 		Team team =  this.teamRepository.findByTeamName(teamName);
