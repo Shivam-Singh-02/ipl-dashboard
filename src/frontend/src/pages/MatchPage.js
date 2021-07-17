@@ -18,7 +18,7 @@ export const MatchPage = () => {
               setMatches(data);
             }
             fetchMatches();
-        },[]
+        },[year]
     );
         
     if(!matches) return null;
