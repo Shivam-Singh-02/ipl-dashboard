@@ -18,7 +18,7 @@ export const TeamTile = ({teamName}) => {
        
             <h1>
                 <Link to={`/team/${teamName}`}>{teamName}</Link>
-                <img src={`https://wtspdp.com/wp-content/uploads/2021/04/ipl-2021-${teams[teamName]}.png`}/>
+                <img src={`https://wtspdp.com/wp-content/uploads/2021/04/ipl-2021-${teams[teamName]}.png`} alt=""/>
             </h1>
         </div>
     )
